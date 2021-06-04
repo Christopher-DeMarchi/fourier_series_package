@@ -23,4 +23,4 @@ class Series():
         series = self.ao * ones_mat
 
         for n in range(1,Harmonic,1):
-            series = self.ao + self.an * np.cos(n * x) + self.bn * np.sin(n * x) #Combines all the constants with the general Fourier series
+            series = series + self.an * np.cos(n * x) + self.bn * np.sin(n * x) #Combines all the constants with the general Fourier series

@@ -4,16 +4,14 @@ import matplotlib.pyplot as plt
 import sympy as sy
 import array as arr
 
-# inputs L (pi), f(the equation), harmonics(25)
+# inputs L (pi), f(ao), harmonics(25)
 
 x = np.linspace(-pi,pi,50)
-elems = x.size
-ao = np.ones(elems,dtype = float)
+ao = np.ones(x.size,dtype = float)
 f = ((pi**2)/3)*ao
 
 for n in range(1,25,1):
-    f = f + ((4*(-1)**n) / n**2)*np.cos(n*x)
-    
+    f = f + ((4*(-1)**n) / n**2) * np.cos(n*x)
 
 plt.plot(x,f)
 plt.xlabel('x-axis')
